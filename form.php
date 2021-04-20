@@ -29,7 +29,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="xu_ly.php" method="POST">
+    <form action="xu_ly.php" method="GET">
         <label>Tên đăng nhập</label>
         <input type="text" id="username" name="ten_dang_nhap">
 
