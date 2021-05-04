@@ -13,11 +13,11 @@ class Stack{
     }
 }
 $objStack = new Stack();
-$objStack->push("A");
-$objStack->push("B");
-$objStack->push("C");
-$objStack->push("D");
-$objStack->push("E");
+$objStack->push(1);
+$objStack->push(2);
+$objStack->push(3);
+$objStack->push(4);
+$objStack->push(5);
 
 echo '<pre>';
     print_r( $objStack );
