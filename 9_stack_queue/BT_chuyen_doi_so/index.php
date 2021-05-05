@@ -25,6 +25,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 array_push($this->stack,$number%2);
                 $number = $number/2;
             }
+            if($number == 0){
+            array_push($this->stack,0);
+            }
             return $this->stack;
         }
         public function pop(){
