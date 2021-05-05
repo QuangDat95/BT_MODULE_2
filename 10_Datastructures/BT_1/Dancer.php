@@ -21,7 +21,7 @@
     $objSplQueue_nu = new SplQueue();
 
     /* Bước 3: Tạo một số dancer nam và dancer nữ. Lần lượt thêm các dancer nam và nữ vào trong hàng đợi tương ứng */    
-    //thêm 3 bạn nam vào hàng đợi
+    //thêm 4 bạn nam vào hàng đợi
     $objSplQueue_nam->enqueue( new Dancer('Hùng','male') );
     $objSplQueue_nam->enqueue( new Dancer('Đạt','male') );
     $objSplQueue_nam->enqueue( new Dancer('Hoàn','male') );
