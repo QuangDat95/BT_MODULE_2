@@ -21,17 +21,22 @@
     $objSplQueue_nu = new SplQueue();
 
     /* Bước 3: Tạo một số dancer nam và dancer nữ. Lần lượt thêm các dancer nam và nữ vào trong hàng đợi tương ứng */    
-    //thêm các bạn nam vào hàng đợi
+    //thêm 3 bạn nam vào hàng đợi
     $objSplQueue_nam->enqueue( new Dancer('Hùng','male') );
     $objSplQueue_nam->enqueue( new Dancer('Đạt','male') );
     $objSplQueue_nam->enqueue( new Dancer('Hoàn','male') );
     $objSplQueue_nam->enqueue( new Dancer('Châu','male') );
 
-    //thêm các bạn nữ vào hàng đợi
+    //thêm 3 bạn nữ vào hàng đợi
     $objSplQueue_nu->enqueue( new Dancer('Thảo','female') );
     $objSplQueue_nu->enqueue( new Dancer('Ngọc Anh','female') );
+    $objSplQueue_nu->enqueue( new Dancer('Diệu Thúy','female'));
 
-    //
+    //thêm 3 bạn nữ vào hàng đợi
+    $objSplQueue_nu->enqueue( new Dancer('Tuyết', 'female'));
+    $objSplQueue_nu->enqueue( new Dancer('Ngọc', 'female'));
+    $objSplQueue_nu->enqueue( new Dancer('Trà', 'female'));
+
     $i = 0;
     $pairs              = [];
     $nam_waiting        = [];
