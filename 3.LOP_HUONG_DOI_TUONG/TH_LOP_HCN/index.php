@@ -34,9 +34,9 @@ echo $rectangle->height; // 0utput: 20
 $rectangle->height = 30;
 $rectangle->width = 20;
 
-echo $rectangle->height; // 0utput: 30
-echo $rectangle->width; // 0utput: 20
-echo $rectangle->getPerimeter(); // 0utput: 100
-echo $rectangle->getArea(); // Output: 600
+echo "Chiều dài: ".$rectangle->height."<br>"; // 0utput: 30
+echo "Chiều rộng: ".$rectangle->width."<br>"; // 0utput: 20
+echo "Chu vi: ".$rectangle->getPerimeter()."<br>"; // 0utput: 100
+echo "Diện tích: ".$rectangle->getArea()."<br>"; // Output: 600
 echo ("Your Rectangle". $rectangle->display());
 ?>
