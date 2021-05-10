@@ -23,7 +23,7 @@ class Point2D{
     }
     public function __toString():string
     {
-        return "ĐIểm A có tung độ là {$this->x} <br> Hoành độ là {$this->y} <br>";
+        return "ĐIểm A có Hoành độ là {$this->x} <br> Tung độ là {$this->y} <br>";
     }
 }
 ?>
