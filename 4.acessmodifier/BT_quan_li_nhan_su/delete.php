@@ -1,6 +1,6 @@
 <?php
-    require_once 'classes/EmployeeManager.php';
-    require_once 'classes/Employee.php';
+    require_once 'Classes/EmployeeManager.php';
+    require_once 'Classes/Employee.php';
     
     //khởi tạo đối tượng EmployeeManager
     use Classes\EmployeeManager;
