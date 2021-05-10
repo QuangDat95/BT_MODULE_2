@@ -18,7 +18,7 @@ try {
     $result = divide($so_a,$so_b);
     echo $result;
 } catch (DivideByZeroExeption $e){
-    echo 'Có lỗi xảy ra: '.$e;
+    echo $e;
 }
 }
 ?>
