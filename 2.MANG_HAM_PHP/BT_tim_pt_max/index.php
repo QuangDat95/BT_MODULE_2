@@ -22,7 +22,6 @@
             }
         }
         echo "Số lớn nhất trong mảng là: {$max}";
-        echo typeOf($mang);
     ?>
 </body>
 </html>
