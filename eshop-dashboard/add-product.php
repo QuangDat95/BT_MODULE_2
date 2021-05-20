@@ -60,12 +60,12 @@ header("Location: list-products.php");
                             <div class="clear"></div>
                         </div> 
                         <div class="row-form">
-                            <div class="span3">Activate:</div>
+                            <div class="span3">Kích hoạt:</div>
                             <div class="span9">
                                 <select name="select">
-                                    <option value="0">choose a option...</option>
-                                    <option value="1">Activate</option>
-                                    <option value="2">Deactivate</option>
+                                    <option value="0">--Chọn mục--</option>
+                                    <option value="1">Kích hoạt</option>
+                                    <option value="2">Bỏ kích hoạt</option>
                                 </select>
                             </div>
                             <div class="clear"></div>

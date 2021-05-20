@@ -2,6 +2,12 @@
 <?php include 'layout/menu.php'; ?>
 <?php include 'ketnoicsdl.php'?>
 <?php
+//Lấy tất cả danh mục sách
+$sql   = "SELECT * FROM the_loai";
+$stmt  = $connect->query( $sql );
+$stmt->setFetchMode(PDO::FETCH_OBJ);
+$the_loais   = $stmt->fetchAll();
+
     //lấy id truyền qua
     $id = $_GET['id'];//10
     
@@ -47,7 +53,28 @@
                             <div class="span9"><input type="text" name="Ten_sach" placeholder="Nhập tên sách"
                             value="<?php echo $row->Ten_sach; ?>"/></div>
                             <div class="clear"></div>
+                        </div>
+
+                        <div class="row-form">
+                            <div class="span3">ID danh mục:</div>
+                            <div class="span9">
+                            <select name="ID_danh_muc">
+                                    <option value="0">Chọn danh mục</option>
+                                    <?php foreach($the_loais as $the_loai):?>
+                                    <option value="<?php echo $the_loai->ID_danh_muc;?>"
+                                    <?php 
+                                        if( $row->ID_danh_muc == $the_loai->ID_danh_muc ){
+                                            echo 'selected';
+                                        }
+                                    ?>>
+                                    <?php echo $the_loai->Ten_danh_muc; ?>
+                                    </option>
+                                    <?php endforeach;?>
+                            </select>
+                            </div>
+                            <div class="clear"></div>
                         </div> 
+
                         <div class="row-form">
                             <div class="span3">Kích hoạt:</div>
                             <div class="span9">
