@@ -39,36 +39,38 @@
 </form>
     </fieldset>
     <?php
-    $number1 = $_POST['number_1'];
-    $number2 = $_POST['number_2'];
-    class Calculator{
-       public $number1;
-       public $number2;
-       function set_number1(){
-           $this->number1 = $number1;
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $number1 = $_POST['number_1'];
+        $number2 = $_POST['number_2'];
+        class Calculator{
+           public $number1;
+           public $number2;
+           function set_number1(){
+               $this->number1 = $number1;
+            }
+            function get_number1(){
+                return $this->number1;
+            }
+            function set_number2(){
+                $this->number2 = $number2;
+            }
+             function get_number2(){
+                 return $this->number2;
+            }
+           function Add($number1,$number2){
+               echo "<h1>Result:</h1>".$number1." + ".$number2." = ".($number1 + $number2);
+           }
+           function Sub($number1,$number2){
+            echo "<h1>Result:</h1>".$number1." - ".$number2." = ".($number1 - $number2);
+           }
+           function Mul($number1,$number2){
+            echo "<h1>Result:</h1>".$number1." x ".$number2." = ".($number1 * $number2);
+           }
+           function Div($number1,$number2){
+            echo "<h1>Result:</h1>".$number1." : ".$number2."=".($number1 / $number2);
+           }
         }
-        function get_number1(){
-            return $this->number1;
-        }
-        function set_number2(){
-            $this->number2 = $number2;
-        }
-         function get_number2(){
-             return $this->number2;
-        }
-       function Add($number1,$number2){
-           echo "<h1>Result:</h1>".$number1." + ".$number2." = ".($number1 + $number2);
-       }
-       function Sub($number1,$number2){
-        echo "<h1>Result:</h1>".$number1." - ".$number2." = ".($number1 - $number2);
-       }
-       function Mul($number1,$number2){
-        echo "<h1>Result:</h1>".$number1." x ".$number2." = ".($number1 * $number2);
-       }
-       function Div($number1,$number2){
-        echo "<h1>Result:</h1>".$number1." : ".$number2."=".($number1 / $number2);
-       }
-    }
+    
     $Phep_toan = new Calculator($number1,$number2);
     if(isset($_POST['phep_toan'])){
         $phep_toan = $_POST['phep_toan'];
@@ -92,6 +94,7 @@
                 } 
         }
     }
+}
     ?>
 </body>
 </html>
